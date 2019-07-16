@@ -11,4 +11,17 @@ const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecoder(), te
 
 async function main() {
 
+    try{
+        const result = await rpc.get_account("baekseok1115");
+        console.log(result.created);
+        //console.log(result.timestamp);
+        //console.log(result.producer);
+
+    }catch(error){
+        console.error(error);   //파란색의 error는 에러내용이 들어가있는 변수다.
+
+    }
+
 }
+
+main();
